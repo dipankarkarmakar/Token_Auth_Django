@@ -9,6 +9,10 @@ from rest_framework.status import (
     HTTP_200_OK
 )
 from rest_framework.response import Response
+# from rest_framework import status, viewsets, permissions, views
+# from .models import GoUser
+# from .serializers import RegisterSerializer
+
 # from django.contrib.auth import login, authenticate
 # from django.shortcuts import render, redirect
 # from .forms import SignUpForm
@@ -56,5 +60,31 @@ def sample_api(request):
 
 
 
-
-
+# class Register(viewsets.ModelViewSet):
+#     queryset = GoUser.objects.all()
+#     serializer_class = RegisterSerializer
+#     permission_classes = (permissions.AllowAny,)
+#
+#     def registration_step1(self, request):
+#         """
+#         If individual user company='GoalEzy', role='admin', link='get_site(self.request)', type='S'
+#         If Organization user company=request.data['company_name'], role=request.data['role'],
+#          link=request.data['company_link'], type=request.data['type']
+#         :param request: email, password, full_name, company_name, role, company_link, type
+#         :return: token, user
+#         """
+#         email = request.data['email'].lower()
+#         username = request.data['username']
+#         phone = request.data['phone']
+#         password = request.data['password']
+#         country_code = request.data['country_code']
+#         full_name = str.title(request.data['full_name'])
+#         check = GoUser.objects.filter(email__iexact=email).exists()
+#         if check:
+#             content = {
+#                 'message': 'Already Exist'
+#             }
+#             return Response(content, status=status.HTTP_409_CONFLICT)
+#
+#
+#

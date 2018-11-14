@@ -6,4 +6,5 @@ from .views import login, sample_api
 urlpatterns = [
     path('api/login', login),
     path('api/sampleapi', sample_api),
+    # path('signup/', Register),
 ]
